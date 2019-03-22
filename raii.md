@@ -1,4 +1,3 @@
-![Logo](https://www.clearcapital.com/wp-content/uploads/2015/02/Clear-Capital@2x.png)
 --
 
 [Home](README)
@@ -12,8 +11,8 @@ String tableName = CQLHelpers.getUniqueName("tmp_");
 try( TemporaryTable temporaryTable = CassandraTableProcessor
   .tableBuilder(executor, cassandraResource.getClient(), DemoTable.class).setTableName(tableName)
   .buildTemp() ) {
-  
+
   // do stuff with temporaryTable here...
-  
+
 } // temporaryTable.close() gets called, dropping the table.
 ```

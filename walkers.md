@@ -1,4 +1,3 @@
-![Logo](https://www.clearcapital.com/wp-content/uploads/2015/02/Clear-Capital@2x.png)
 --
 
 [Home](README)
@@ -10,7 +9,7 @@ and deserialize each row into your model objects, in turn.
 
 The order of the walk is *token order*.
 
-Walkers support calculating progress and eta, as well as obtaining the token for the current 
+Walkers support calculating progress and eta, as well as obtaining the token for the current
 row.
 
 ```
@@ -18,9 +17,9 @@ CassandraTableWalker<ModelType> walker = new CassandraTableWalker<ModelType>(
     session, session.getLoggedKeyspace(), tableName, keyColumnNames, deserializer)
         .setStartToken(startToken)
         .setEndToken(endToken);
-    
+
 LocalDateTime start = LocalDateTime.now();
-                    
+
 for(ModelType model : walker) {
     log.debug("The walker found:" + model);
     log.debug("Token:" + walker.getToken());

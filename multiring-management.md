@@ -1,4 +1,3 @@
-![Logo](https://www.clearcapital.com/wp-content/uploads/2015/02/Clear-Capital@2x.png)
 --
 
 [Home](README)
@@ -65,5 +64,3 @@ ResultSet results = session.execute("SELECT * FROM someTable");
   migrate tables from one ring to another by grouping them together
   on logical boundaries (e.g., "authentication" and "logs"), and then
   choosing which ring each group "belongs" to.
-
-

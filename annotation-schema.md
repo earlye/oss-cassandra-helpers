@@ -1,4 +1,3 @@
-![Logo](https://www.clearcapital.com/wp-content/uploads/2015/02/Clear-Capital@2x.png)
 --
 
 [Home](README)
@@ -40,7 +39,7 @@ table from Cassandra's perspective, and how to find it with respect to
 
 ```java
 @CassandraTable(
-  tableName="demo_table", 
+  tableName="demo_table",
   multiRingGroup="groupA"
 )
 class DemoTable {
@@ -64,7 +63,7 @@ be a simple mapping from an id to a JSON-encoded object:
 
 ```java
 @CassandraTable(
-  tableName="demo_table", 
+  tableName="demo_table",
   multiRingGroup="groupA",
   columns={
     @Column(cassandraName="id", reflectionColumnInfo = @ReflectionColumnInfo(
@@ -109,7 +108,7 @@ clustering column:
 
 ```java
 @CassandraTable(
-  tableName="demo_table", 
+  tableName="demo_table",
   multiRingGroup="groupA",
   columns={
     @Column(cassandraName="id", reflectionColumnInfo = @ReflectionColumnInfo(
@@ -148,7 +147,7 @@ Or perhaps we want a compound partition key:
 
 ```java
 @CassandraTable(
-  tableName="demo_table", 
+  tableName="demo_table",
   multiRingGroup="groupA",
   columns={
     @Column(cassandraName="id", reflectionColumnInfo = @ReflectionColumnInfo(
@@ -193,7 +192,7 @@ What about clustering order? There's an annotation for that, too!
 
 ```java
 @CassandraTable(
-  tableName="demo_table", 
+  tableName="demo_table",
   multiRingGroup="groupA",
   columns={
     @Column(cassandraName="id", reflectionColumnInfo = @ReflectionColumnInfo(
@@ -217,4 +216,3 @@ What about clustering order? There's an annotation for that, too!
 class DemoTable {
 };
 ```
-
